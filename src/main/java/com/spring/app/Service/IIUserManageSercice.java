@@ -14,4 +14,6 @@ public interface IIUserManageSercice {
 	UserVO findUserById(String userId);
 
     void createUser(UserVO userVO);
+
+    UserVO findUserwithContact(UserVO vo);
 }

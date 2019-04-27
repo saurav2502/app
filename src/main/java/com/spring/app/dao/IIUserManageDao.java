@@ -19,4 +19,6 @@ public interface IIUserManageDao {
 	void deleteUser(UserVO userVO);
 
 	void createUser(UserVO userVO);
+
+	UserVO findUserwithContact(UserVO vo);
 }

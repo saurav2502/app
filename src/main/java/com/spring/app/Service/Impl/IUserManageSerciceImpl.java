@@ -28,6 +28,12 @@ public class IUserManageSerciceImpl implements IIUserManageSercice {
 	}
 
 	@Override
+	public UserVO findUserwithContact(UserVO vo) {
+		UserVO result = userDao.findUserwithContact(vo);
+		return result;
+	}
+
+	@Override
 	public void updateUser(UserVO userVO) {
 		userDao.updateUser(userVO);
 	}

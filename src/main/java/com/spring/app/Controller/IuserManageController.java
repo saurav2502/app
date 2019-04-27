@@ -45,4 +45,12 @@ public class IuserManageController {
     public void createUser(@RequestBody UserVO userVO){
         iUserManageSercice.createUser(userVO);
     }
+
+    @GetMapping("getuser/{id}/{contact}")
+    public UserVO findUserwithContact(@PathVariable String id, @PathVariable String contact ){
+        UserVO vo = new UserVO();
+        vo.setUserId(id);
+        vo.setUserContact(contact);
+        return iUserManageSercice.findUserwithContact(vo);
+    }
 }

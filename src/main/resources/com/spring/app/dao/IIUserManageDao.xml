@@ -37,4 +37,20 @@
                  #{userName,jdbcType=VARCHAR}
                 )
     </insert>
+    <resultMap id="userResult" type="com.spring.app.vo.UserVO">
+        <id property="userId" column="id" />
+        <result property="userEmail" column="email"/>
+        <result property="userContact" column="contact"/>
+        <result property="userName" column="name"/>
+    </resultMap>
+
+    <select id="findUserwithContact" resultMap="userResult">
+        select t.id ,
+               t.contact ,
+               t.email ,
+               t.name
+        from users t
+        where t.id = #{userId, jdbcType=VARCHAR}
+        and t.contact = #{userContact, jdbcType=VARCHAR}
+    </select>
 </mapper>
