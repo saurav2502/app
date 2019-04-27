@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.spring.app.dao.IIUserManageDao">
+   <select id="findAllUser" resultType="com.spring.app.vo.UserVO">
+        select t.name as userName, t.id as userId, t.contact as userContact from users t
+   </select>
+   <select id="findUserById" resultType="com.spring.app.vo.UserVO">
+        select t.name as userName, t.id as userId, t.contact as userContact 
+        from users t
+        where t.id = #{userId, jdbcType=VARCHAR}
+   </select>
+    <update id="updateUser">
+        update users
+          set email = #{userEmail, jdbcType=VARCHAR},
+              contact = #{userContact, jdbcType=VARCHAR}
+          where id = #{userId, jdbcType=VARCHAR}
+        <!--<if test="userEmail != null">
+            set email = #{userEmail, jdbcType=VARCHAR},
+        </if>
+        <if test="userContact != null">
+            contact = #{userContact, jdbcType=VARCHAR},
+        </if>
+        <if test="userId != null">
+            where id = #{userId, jdbcType=VARCHAR}
+        </if>-->
+    </update>
+</mapper>
