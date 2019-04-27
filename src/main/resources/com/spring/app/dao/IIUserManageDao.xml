@@ -16,14 +16,25 @@
           set email = #{userEmail, jdbcType=VARCHAR},
               contact = #{userContact, jdbcType=VARCHAR}
           where id = #{userId, jdbcType=VARCHAR}
-        <!--<if test="userEmail != null">
-            set email = #{userEmail, jdbcType=VARCHAR},
-        </if>
-        <if test="userContact != null">
-            contact = #{userContact, jdbcType=VARCHAR},
-        </if>
-        <if test="userId != null">
-            where id = #{userId, jdbcType=VARCHAR}
-        </if>-->
     </update>
+    <delete id="deleteUser">
+        delete from users
+          where id = #{userId, jdbcType=VARCHAR}
+    </delete>
+    <insert id="createUser">
+        insert into users
+            (
+             id,
+             email,
+             contact,
+             name
+            )
+            VALUES
+                (
+                  #{userId, jdbcType=VARCHAR},
+                 #{userEmail, jdbcType=VARCHAR},
+                 #{userContact,jdbcType=VARCHAR},
+                 #{userName,jdbcType=VARCHAR}
+                )
+    </insert>
 </mapper>

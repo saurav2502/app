@@ -15,4 +15,8 @@ public interface IIUserManageDao {
 	UserVO findUserById(UserVO uservo);
 
     void updateUser(UserVO userVO);
+
+	void deleteUser(UserVO userVO);
+
+	void createUser(UserVO userVO);
 }

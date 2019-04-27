@@ -23,13 +23,18 @@ public class IUserManageSerciceImpl implements IIUserManageSercice {
 	}
 
 	@Override
+	public void createUser(UserVO userVO) {
+		userDao.createUser(userVO);
+	}
+
+	@Override
 	public void updateUser(UserVO userVO) {
 		userDao.updateUser(userVO);
 	}
 
 	@Override
-	public void deleteUser() {
-
+	public void deleteUser(UserVO userVO) {
+		userDao.deleteUser(userVO);
 	}
 
 	@Override

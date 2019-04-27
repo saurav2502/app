@@ -2,6 +2,7 @@ package com.spring.app.Controller;
 
 import java.util.List;
 
+import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Scope;
@@ -33,5 +34,15 @@ public class IuserManageController {
     @PutMapping("update")
     public void updateUser(@RequestBody UserVO userVO){
         iUserManageSercice.updateUser(userVO);
+    }
+
+    @PutMapping("deleteUser")
+    public void deleteUser(@RequestBody UserVO userVO){
+        iUserManageSercice.deleteUser(userVO);
+    }
+
+    @PostMapping("addUser")
+    public void createUser(@RequestBody UserVO userVO){
+        iUserManageSercice.createUser(userVO);
     }
 }

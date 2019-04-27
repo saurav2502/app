@@ -9,7 +9,9 @@ public interface IIUserManageSercice {
     List<UserVO> findAllUser();
     UserVO findUserById(UserVO userVo);
     void updateUser(UserVO userVO);
-    void deleteUser();
+    void deleteUser(UserVO userVO);
     void addUser();
 	UserVO findUserById(String userId);
+
+    void createUser(UserVO userVO);
 }
