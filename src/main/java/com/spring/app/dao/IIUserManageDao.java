@@ -21,4 +21,6 @@ public interface IIUserManageDao {
 	void createUser(UserVO userVO);
 
 	UserVO findUserwithContact(UserVO vo);
+
+	List<UserVO> findUserMap(List<String> idList);
 }

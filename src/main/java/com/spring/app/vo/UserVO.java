@@ -1,7 +1,5 @@
 package com.spring.app.vo;
 
-import org.apache.catalina.User;
-
 import java.util.List;
 
 public class UserVO {
@@ -12,7 +10,7 @@ public class UserVO {
     private String userName;
     private String userEmail;
     private String userContact;
-    private List<User> userIds;
+    private List<String> userIds;
 
     public String getUserId() {
         return userId;
@@ -46,15 +44,15 @@ public class UserVO {
         this.userContact = userContact;
     }
 
-    public List<User> getUserIds() {
+    public List<String> getUserIds() {
         return userIds;
     }
 
-    public void setUserIds(List<User> userIds) {
+    public void setUserIds(List<String> userIds) {
         this.userIds = userIds;
     }
 
-	public UserVO(String userId, String userName, String userEmail, String userContact, List<User> userIds) {
+	public UserVO(String userId, String userName, String userEmail, String userContact, List<String> userIds) {
 		super();
 		this.userId = userId;
 		this.userName = userName;

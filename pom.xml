@@ -42,19 +42,6 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/findbugs-maven-plugin -->
-        <dependency>
-            <groupId>org.codehaus.mojo</groupId>
-            <artifactId>findbugs-maven-plugin</artifactId>
-            <version>3.0.5</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/pmd/pmd -->
-        <dependency>
-            <groupId>pmd</groupId>
-            <artifactId>pmd</artifactId>
-            <version>4.2.4</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/checkstyle/checkstyle -->
         <dependency>
             <groupId>checkstyle</groupId>
             <artifactId>checkstyle</artifactId>

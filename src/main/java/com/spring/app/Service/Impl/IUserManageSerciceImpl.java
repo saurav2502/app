@@ -34,6 +34,12 @@ public class IUserManageSerciceImpl implements IIUserManageSercice {
 	}
 
 	@Override
+	public List<UserVO> findUserMap(List<String> idList) {
+		List<UserVO> userVOList = userDao.findUserMap(idList);
+		return userVOList;
+	}
+
+	@Override
 	public void updateUser(UserVO userVO) {
 		userDao.updateUser(userVO);
 	}

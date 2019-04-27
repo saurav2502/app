@@ -53,4 +53,11 @@
         where t.id = #{userId, jdbcType=VARCHAR}
         and t.contact = #{userContact, jdbcType=VARCHAR}
     </select>
+    <select id="findUserMap" resultMap="userResult">
+        select t.* from users t
+        where t.id in
+          <foreach collection="list" item="item" index="index" separator="," open="(" close=")">
+              #{item, jdbcType=VARCHAR}
+          </foreach>
+    </select>
 </mapper>

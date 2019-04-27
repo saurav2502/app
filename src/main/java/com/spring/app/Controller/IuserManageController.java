@@ -53,4 +53,9 @@ public class IuserManageController {
         vo.setUserContact(contact);
         return iUserManageSercice.findUserwithContact(vo);
     }
+
+    @GetMapping("mapUser/{ids}")
+    public List<UserVO> getUserMap(@PathVariable("ids") List<String> idList){
+        return iUserManageSercice.findUserMap(idList);
+    }
 }
