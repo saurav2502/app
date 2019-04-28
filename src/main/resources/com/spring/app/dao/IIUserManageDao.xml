@@ -60,4 +60,10 @@
               #{item, jdbcType=VARCHAR}
           </foreach>
     </select>
+    <select id="getDemodata" resultType="map">
+        select t.id,
+               t.contact
+        from users t
+        where t.id = #{id, jdbcType=VARCHAR}
+    </select>
 </mapper>

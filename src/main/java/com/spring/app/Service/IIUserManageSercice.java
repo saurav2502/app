@@ -1,8 +1,9 @@
 package com.spring.app.Service;
 
-import java.util.List;
-
 import com.spring.app.vo.UserVO;
+
+import java.util.List;
+import java.util.Map;
 
 
 public interface IIUserManageSercice {
@@ -18,4 +19,6 @@ public interface IIUserManageSercice {
     UserVO findUserwithContact(UserVO vo);
 
     List<UserVO> findUserMap(List<String> idList);
+
+    Map<String, String> getDemodata(String id);
 }

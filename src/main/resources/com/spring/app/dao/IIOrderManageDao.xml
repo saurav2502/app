@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.spring.app.dao.IIOrderManageDao">
+    <resultMap id="orderMap" type="com.spring.app.vo.OrderVO">
+        <id property="orderId" column="order_id" />
+        <result property="orderBy" column="order_by" />
+        <result property="lastUpdate" column="last_update" />
+        <result property="orderDate" column="order_date" />
+        <result property="oderDeliver" column="deliver_date" />
+        <result property="orderName" column="order_name" />
+        <result property="applicationType" column="application_type" />
+        <result property="orderRisk" column="order_risk" />
+        <result property="userId" column="user_id" />
+    </resultMap>
+    <select id="findOrderById" resultMap="orderMap">
+        select o.*
+        from `order` o
+        where o.user_id = #{userId, jdbcType=VARCHAR}
+    </select>
+</mapper>
