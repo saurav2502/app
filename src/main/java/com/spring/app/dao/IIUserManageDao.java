@@ -1,26 +1,28 @@
 package com.spring.app.dao;
 
-import java.util.List;
-
+import com.spring.app.vo.UserVO;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Service;
 
-import com.spring.app.vo.UserVO;
+import java.util.List;
+import java.util.Map;
 
 @Mapper
 @Service
 public interface IIUserManageDao {
-	List<UserVO> findAllUser();
+    List<UserVO> findAllUser();
 
-	UserVO findUserById(UserVO uservo);
+    UserVO findUserById(UserVO uservo);
 
     void updateUser(UserVO userVO);
 
-	void deleteUser(UserVO userVO);
+    void deleteUser(UserVO userVO);
 
-	void createUser(UserVO userVO);
+    void createUser(UserVO userVO);
 
-	UserVO findUserwithContact(UserVO vo);
+    UserVO findUserwithContact(UserVO vo);
 
-	List<UserVO> findUserMap(List<String> idList);
+    List<UserVO> findUserMap(List<String> idList);
+
+    Map<String, String> getDemodata(String id);
 }
