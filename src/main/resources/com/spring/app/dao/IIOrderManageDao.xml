@@ -19,4 +19,9 @@
         from `order` o
         where o.user_id = #{userId, jdbcType=VARCHAR}
     </select>
+    <select id="findOrderById_1" resultMap="orderMap">
+        select o.*
+        from `order` o
+        where o.user_id = #{userId, jdbcType=VARCHAR}
+    </select>
 </mapper>
