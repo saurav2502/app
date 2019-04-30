@@ -16,7 +16,7 @@ public class IorderManageController {
     private IIOrderManageService orderManageService;
 
     @GetMapping("order/{id}")
-    public OrderVO findOrderByUserId(@PathVariable("id")  String userId){
+    public OrderVO findOrderByUserId(@PathVariable("id") String userId) {
         return orderManageService.findOrderByUserId(userId);
     }
 }
